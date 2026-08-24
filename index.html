@@ -12,19 +12,14 @@
         body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial,Helvetica,sans-serif; }
         a { color:inherit; text-decoration:none; }
         .shell { width:min(1160px,calc(100% - 48px)); margin:0 auto; }
-        nav { height:92px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
-        .brand { width:45px; height:45px; display:grid; place-items:center; border:2px solid var(--ink); font-size:26px; font-weight:900; }
-        .brand span, h1 span { color:var(--dark-yellow); }
-        .navigation-links { display:flex; gap:32px; font-size:14px; font-weight:700; }
+        h1 span { color:var(--dark-yellow); }
         .hero { min-height:610px; padding:120px 0 90px; }
-        .eyebrow { display:flex; align-items:center; gap:10px; font-size:12px; font-weight:800; letter-spacing:.15em; text-transform:uppercase; }
-        .eyebrow-line { width:30px; height:4px; background:var(--yellow); }
         h1 { max-width:920px; margin:26px 0; font-size:clamp(52px,7.5vw,100px); line-height:.94; letter-spacing:-.065em; }
         .introduction { max-width:600px; color:var(--muted); font-size:19px; line-height:1.65; }
         .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:36px; }
         .button { min-height:52px; display:inline-flex; align-items:center; justify-content:center; padding:0 24px; border:2px solid var(--ink); font-size:13px; font-weight:800; }
-        .primary-button { background:var(--yellow); box-shadow:6px 6px 0 var(--ink); transition:transform .2s,box-shadow .2s; }
-        .primary-button:hover { transform:translate(3px,3px); box-shadow:3px 3px 0 var(--ink); }
+        .primary-button { background:var(--yellow); transition:background-color .2s; }
+        .primary-button:hover { background:var(--dark-yellow); }
         .discord { background:transparent; }
         .work { padding:100px 0 110px; background:var(--section); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
         h2 { margin:0 0 45px; font-size:clamp(38px,5vw,60px); letter-spacing:-.055em; }
@@ -37,7 +32,6 @@
         @media (max-width:800px) { .project { grid-template-columns:1fr; } }
         @media (max-width:560px) {
             .shell { width:calc(100% - 30px); }
-            nav { height:74px; }
             .hero { min-height:auto; padding:85px 0 75px; }
             .introduction { font-size:17px; }
             .work { padding:75px 0; }
@@ -47,14 +41,9 @@
     </style>
 </head>
 <body>
-    <nav class="shell">
-        <a class="brand" href="#top">B<span>.</span></a>
-        <div class="navigation-links"><a href="#work">Work</a></div>
-    </nav>
     <header class="hero shell" id="top">
-        <div class="eyebrow"><span class="eyebrow-line"></span>Roblox developer portfolio</div>
-        <h1>Hi, I’m <span>Bananinha.</span></h1>
-        <p class="introduction">A generalist Roblox developer creating gameplay systems, interfaces, and reliable game architecture in Luau.</p>
+        <h1><span>Bananinha.</span></h1>
+        <p class="introduction">A Roblox developer creating gameplay systems, interfaces, and game scripts in Luau.</p>
         <div class="hero-actions">
             <a class="button primary-button" href="#work">View my work ↓</a>
             <span class="button discord">Discord · bananinha.1234</span>
