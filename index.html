@@ -1,20 +1,310 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The Roblox development portfolio of Banininha.">
-  <title>Banininha | Roblox Developer</title>
-  <style>
-    :root{--yellow:#ffd500;--ink:#171712;--muted:#68685f;--paper:#fffef8;--line:#deddd1}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}.shell{width:min(1160px,calc(100% - 48px));margin:auto}nav{height:92px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{width:45px;height:45px;display:grid;place-items:center;border:2px solid;font-size:26px;font-weight:900}.brand span,h1 span{color:#d5ae00}.links{display:flex;gap:32px;font-size:14px;font-weight:700}.hero{min-height:610px;padding:120px 0 90px;position:relative;overflow:hidden}.eyebrow{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.eyebrow i{width:30px;height:4px;background:var(--yellow)}h1{max-width:920px;margin:26px 0;font-size:clamp(52px,7.5vw,100px);line-height:.94;letter-spacing:-.065em}.intro{max-width:600px;color:var(--muted);font-size:19px;line-height:1.65}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}.button{min-height:52px;display:inline-flex;align-items:center;justify-content:center;padding:0 24px;border:2px solid;font-size:13px;font-weight:800}.primary{background:var(--yellow);box-shadow:6px 6px 0}.secondary{background:transparent}.mark{position:absolute;right:20px;top:110px;color:var(--yellow);font-size:260px;opacity:.18}.work{padding:100px 0 110px;background:#f2f1e9;border-block:1px solid var(--line)}h2{margin:0 0 45px;font-size:clamp(38px,5vw,60px);letter-spacing:-.055em}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{min-height:315px;padding:34px;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column}.card:hover{transform:translateY(-6px);box-shadow:8px 8px 0 var(--yellow);border-color:var(--ink)}.card h3{margin:0 0 12px;font-size:24px}.card p{color:var(--muted);font-size:14px;line-height:1.65}.tags{display:flex;flex-wrap:wrap;gap:6px;margin:20px 0}.tags span{padding:6px 9px;background:#f0efe5;font-size:10px;font-weight:800;text-transform:uppercase}.cardLinks{display:flex;justify-content:space-between;gap:10px;margin-top:auto;padding-top:18px;border-top:1px solid var(--line);color:#77766d;font-size:10px;font-weight:800;text-transform:uppercase}.about{padding:110px 0}.aboutGrid{display:grid;grid-template-columns:1fr 1fr;gap:90px}.aboutLead{margin:0;font-size:clamp(27px,3vw,40px);line-height:1.3;font-weight:800}.aboutText{color:var(--muted);font-size:17px;line-height:1.8}.skills{display:grid;grid-template-columns:1fr 1fr;margin-top:30px;border-top:1px solid var(--line)}.skills span{padding:15px 0;border-bottom:1px solid var(--line);color:var(--ink);font-size:13px;font-weight:800}footer{padding:46px 0 26px;background:var(--yellow)}.footerTop,.footerBottom{display:flex;align-items:center;justify-content:space-between}.footerTop strong{font-size:26px}.dark{background:var(--ink);color:white}.footerBottom{margin-top:38px;padding-top:22px;border-top:1px solid #c2a300;font-size:11px;font-weight:800;text-transform:uppercase}@media(max-width:850px){.cards,.aboutGrid{grid-template-columns:1fr}.aboutGrid{gap:35px}.mark{right:-60px}.card{min-height:270px}}@media(max-width:560px){.shell{width:calc(100% - 30px)}nav{height:74px}.links{gap:14px}.links a:first-child{display:none}.hero{min-height:auto;padding:85px 0 75px}.mark{display:none}.work,.about{padding:75px 0}.skills{grid-template-columns:1fr}.footerTop{align-items:flex-start;flex-direction:column;gap:24px}}
-  </style>
-  <style>
-    .feature{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.75fr);background:var(--paper);border:1px solid var(--line)}.video{position:relative;aspect-ratio:16/9;background:var(--ink)}.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.featureCopy{display:flex;flex-direction:column;justify-content:center;padding:42px}.featureCopy h3{margin:0 0 16px;font-size:30px;letter-spacing:-.035em}.featureCopy p{margin:0;color:var(--muted);font-size:15px;line-height:1.75}.footerTop>span{font-size:11px;font-weight:800;text-transform:uppercase}@media(max-width:800px){.feature{grid-template-columns:1fr}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="The Roblox development portfolio of Banininha."
+    >
+
+    <title>Banininha | Roblox Developer</title>
+
+    <style>
+        :root {
+            --yellow: #ffd500;
+            --dark-yellow: #d5ae00;
+            --ink: #171712;
+            --muted: #68685f;
+            --paper: #fffef8;
+            --section: #f2f1e9;
+            --line: #deddd1;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .shell {
+            width: min(1160px, calc(100% - 48px));
+            margin: 0 auto;
+        }
+
+        nav {
+            height: 92px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .brand {
+            width: 45px;
+            height: 45px;
+            display: grid;
+            place-items: center;
+            border: 2px solid var(--ink);
+            font-size: 26px;
+            font-weight: 900;
+        }
+
+        .brand span,
+        h1 span {
+            color: var(--dark-yellow);
+        }
+
+        .navigation-links {
+            display: flex;
+            gap: 32px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .hero {
+            min-height: 610px;
+            padding: 120px 0 90px;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .eyebrow-line {
+            width: 30px;
+            height: 4px;
+            background: var(--yellow);
+        }
+
+        h1 {
+            max-width: 920px;
+            margin: 26px 0;
+            font-size: clamp(52px, 7.5vw, 100px);
+            line-height: 0.94;
+            letter-spacing: -0.065em;
+        }
+
+        .introduction {
+            max-width: 600px;
+            color: var(--muted);
+            font-size: 19px;
+            line-height: 1.65;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 36px;
+        }
+
+        .button {
+            min-height: 52px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 24px;
+            border: 2px solid var(--ink);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .primary-button {
+            background: var(--yellow);
+            box-shadow: 6px 6px 0 var(--ink);
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+        }
+
+        .primary-button:hover {
+            transform: translate(3px, 3px);
+            box-shadow: 3px 3px 0 var(--ink);
+        }
+
+        .discord {
+            background: transparent;
+        }
+
+        .work {
+            padding: 100px 0 110px;
+            background: var(--section);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        h2 {
+            margin: 0 0 45px;
+            font-size: clamp(38px, 5vw, 60px);
+            letter-spacing: -0.055em;
+        }
+
+        .project {
+            display: grid;
+            grid-template-columns:
+                minmax(0, 1.55fr)
+                minmax(280px, 0.75fr);
+
+            background: var(--paper);
+            border: 1px solid var(--line);
+        }
+
+        .video {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background: var(--ink);
+        }
+
+        .video iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .project-information {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 42px;
+        }
+
+        .project-information h3 {
+            margin: 0 0 16px;
+            font-size: 30px;
+            letter-spacing: -0.035em;
+        }
+
+        .project-information p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        @media (max-width: 800px) {
+            .project {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .shell {
+                width: calc(100% - 30px);
+            }
+
+            nav {
+                height: 74px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 85px 0 75px;
+            }
+
+            .introduction {
+                font-size: 17px;
+            }
+
+            .work {
+                padding: 75px 0;
+            }
+
+            .project-information {
+                padding: 28px;
+            }
+
+            .discord {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <nav class="shell"><a class="brand" href="#top">B<span>.</span></a><div class="links"><a href="#work">Work</a></div></nav>
-  <header class="hero shell" id="top"><div class="eyebrow"><i></i>Roblox developer portfolio</div><h1>Hi, I’m <span>Banininha.</span></h1><p class="intro">A generalist Roblox developer creating gameplay systems, interfaces, and reliable game architecture in Luau.</p><div class="actions"><a class="button primary" href="#work">View my work ↓</a></div><div class="mark">✦</div></header>
-  <section class="work" id="work"><div class="shell"><h2>Selected work</h2><article class="feature"><div class="video"><iframe src="https://www.youtube.com/embed/s-_vHIz_eEA" title="Basic Potion System showcase" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="featureCopy"><h3>Basic Potion System</h3><p>A complete brewing system that allows players to create potions with a multitude of different effects.</p><div class="tags"><span>Luau</span><span>Brewing</span><span>Status Effects</span><span>Gameplay Systems</span></div></div></article></div></section>
+    <nav class="shell">
+        <a class="brand" href="#top">
+            B<span>.</span>
+        </a>
+
+        <div class="navigation-links">
+            <a href="#work">Work</a>
+        </div>
+    </nav>
+
+    <header class="hero shell" id="top">
+        <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            Roblox developer portfolio
+        </div>
+
+        <h1>
+            Hi, I’m <span>Banininha.</span>
+        </h1>
+
+        <p class="introduction">
+            A generalist Roblox developer creating gameplay systems,
+            interfaces, and reliable game architecture in Luau.
+        </p>
+
+        <div class="hero-actions">
+            <a class="button primary-button" href="#work">
+                View my work ↓
+            </a>
+
+            <span class="button discord">
+                Discord · bananinha.1234
+            </span>
+        </div>
+    </header>
+
+    <section class="work" id="work">
+        <div class="shell">
+            <h2>Selected work</h2>
+
+            <article class="project">
+                <div class="video">
+                    <iframe
+                        src="https://www.youtube.com/embed/s-_vHIz_eEA"
+                        title="Basic Potion System showcase"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+
+                <div class="project-information">
+                    <h3>Basic Potion System</h3>
+
+                    <p>
+                        A complete brewing system that allows players to
+                        create potions with a multitude of different effects.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
 </body>
 </html>
